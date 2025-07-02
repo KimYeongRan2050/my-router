@@ -13,7 +13,10 @@ import Root, {
 /* previous imports */
 import ErrorPage from "./error-page";
 /* existing imports */
-import Contact from "./routes/contact";
+/* existing code */
+import Contact, {
+  loader as contactLoader,
+} from "./routes/contact";
 
 
 
@@ -30,6 +33,7 @@ const router = createBrowserRouter([
       {
         path: "contacts/:contactId",
         element: <Contact />,
+        loader: contactLoader,
       },
     ],    
   },  
